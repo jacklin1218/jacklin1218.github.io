@@ -1,4 +1,3 @@
-<!-- saved from url=(0043)https://katiehsuty.github.io/I5780/hw3.html -->
 <html>
 
 <head>
@@ -410,12 +409,13 @@
 </head>
 
 <body>
-	<script src="./hw3_o_files/jquery-2.1.4.min.js.下載"></script>
-	<script src="./hw3_o_files/three.min.js.下載"></script>
-	<script src="./hw3_o_files/OrbitControls.js.下載"></script>
-	<script src="./hw3_o_files/dat.gui.min.js.下載"></script>
 
-	<audio id="collisionsound" style="display:none">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
+	<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+
+
+	<audio id="music" style="display:none">
 		<source src="music.mp3" type="audio/mp3">
 	</audio>
 	<script>
@@ -466,9 +466,7 @@
 
 		function init() {
 
-			collisionSound = document.getElementById('collisionsound');
 
-			//collisionSound.play();
 			scene = new THREE.Scene();
 
 
@@ -658,7 +656,7 @@
 
 		}
 		function animate() {
-			collisionSound.play();
+			music.play();
 			theta += 0.01;
 			//	head.rotation.y = Math.PI/6;
 			keyframe(clock.getElapsedTime());
