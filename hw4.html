@@ -17,7 +17,7 @@
 </header>
 <body>
 <div id='info'><p id="toggle" onclick="toggleCamera();" style="width:100%"></p></div>
-	<audio id="collisionsound" style="display:none"><source src="hw2/collision.wav" type="audio/wav"></audio>
+	<audio id="collisionsound" style="display:none"><source src="https://jyunming-chen.github.io/game3js/gameHWhelpers/sounds/collision3.wav" type="audio/wav"></audio>
 	<source src="collision_wall.wav" type='audio/wav'>
 	</audio>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
@@ -29,7 +29,7 @@
   <script type="text/javascript">
 function collision_wall(){
   var audio = document.createElement("audio");
-  audio.src = "hw2/collision.wav";
+  audio.src = "https://jyunming-chen.github.io/game3js/gameHWhelpers/sounds/collision3.wav";
   audio.volume = 0.1;
   audio.play();
 }
@@ -165,7 +165,7 @@ function collision_wall(){
 		planeMat.wrapS = THREE.RepeatWrapping;
 		planeMat.wrapT = THREE.RepeatWrapping;
 	  let plane = new THREE.Mesh(new THREE.PlaneGeometry(250, 500, 10, 1),
-        new THREE.MeshLambertMaterial({map: planeMat.load ("hw4/table.png") }));
+        new THREE.MeshLambertMaterial());
 		
 	  scene.add(plane);
 	  plane.rotation.x = -Math.PI / 2;
